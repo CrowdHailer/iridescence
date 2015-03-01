@@ -32,6 +32,9 @@ All tasks are rake tasks loaded from the tasks directory
 1. All test files must load test configuration
 2. Controller tests must load application file
 
+#### Tests
+Test should inherit from *MyTest* this includes FactoryGirl methods and ensures that tests on the database are rolled back
+
 #### Assets
 Assets are available from `public`. To start purecss and font-awesome icons are included
 
