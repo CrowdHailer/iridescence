@@ -4,8 +4,8 @@ Sequel.migration do
 
     DB.create_constraint_validations_table
 
-    create_table(:pieces) do
-      primary_key :id, :type => :integer, :auto_increment => false, :unique => true
+    create_table(:users) do
+      primary_key :id, :type => :varchar, :auto_increment => false, :unique => true
       String :name, :null => false
     end
   end
@@ -13,7 +13,7 @@ Sequel.migration do
   down do
     extension(:constraint_validations)
 
-    drop_table(:pieces)
+    drop_table(:users)
 
     DB.drop_constraint_validations_table
   end
