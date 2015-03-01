@@ -6,6 +6,13 @@ Visit setup branch to take project agnostic setup
 
 Also used as the development enviroment for several Gems to encourage Domain Driven Design(DDD) in a rapid start up enviroment.
 
+## Setup
+
+#### Tasks
+All tasks are rake tasks loaded from the tasks directory
+
+- List tasks `rake -T`
+
 ## Framework
 
 **[Scorched](http://scorchedrb.com/)** -- Scorched is a generic, unopinionated, DRY, light-weight web framework for Ruby. It provides a generic yet powerful set of constructs for processing HTTP requests, with which websites and applications of almost any scale can be built.
