@@ -12,8 +12,13 @@ Create a enviromental variables file for Dotenv `touch .env`
 Run server with `rackup` or `shotgun` (for reloading)
 
 #### Initialization
-1) The `config.ru` loads the core application from `app/application.rb`
-2) The core application file loads gems and sets up enviroment with `config/boot.rb`
+1. The `config.ru` loads the core application from `app/application.rb`
+2. The core application file loads gems and sets up enviroment with `config/boot.rb`
+3. The application loads all app wide middleware
+4. The application loads and mounts all controllers
+
+**NB**
+1. All controllers should inherit from base controller where
 
 #### Tasks
 All tasks are rake tasks loaded from the tasks directory
