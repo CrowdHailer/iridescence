@@ -4,6 +4,8 @@ Iridescence
 #### Example web application built with Scorched
 Visit setup branch to take project agnostic setup
 
+- Includes procfile for thin on heroku 
+
 Also used as the development enviroment for several Gems to encourage Domain Driven Design(DDD) in a rapid start up enviroment.
 
 ## Setup
