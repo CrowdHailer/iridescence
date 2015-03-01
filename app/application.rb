@@ -6,11 +6,7 @@ Dir[File.expand_path('../controllers/*.rb', __FILE__)].each { |file| require fil
 
 
 module Iridescence
-  class App < Scorched::Controller
-    middleware << proc do |app|
-      use Rack::Session::Cookie, secret: ENV.fetch('SESSION_SECRET_KEY')
-      use Rack::MethodOverride
-    end
+  class App < BaseController
 
     # Load further controllers before final root mounted controller
     controller '/', HomeController
