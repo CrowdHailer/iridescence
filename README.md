@@ -24,6 +24,8 @@ Run server with `rackup` or `shotgun` (for reloading)
 All tasks are rake tasks loaded from the tasks directory
 
 - List tasks `rake -T`
+- Test all application code `rake test`
+- Run test for single directory `rake test:<directory>`
 
 ## Framework
 
