@@ -18,7 +18,8 @@ Run server with `rackup` or `shotgun` (for reloading)
 4. The application loads and mounts all controllers
 
 **NB**
-1. All controllers should inherit from base controller where
+1. All controllers should inherit from base controller where helper methods can be set
+2. All by convention controllers each extend the view path with directory in their name
 
 #### Tasks
 All tasks are rake tasks loaded from the tasks directory
@@ -30,6 +31,9 @@ All tasks are rake tasks loaded from the tasks directory
 **NB**
 1. All test files must load test configuration
 2. Controller tests must load application file
+
+#### Assets
+Assets are available from `public`. To start purecss and font-awesome icons are included
 
 ## Framework
 
