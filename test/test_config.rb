@@ -7,3 +7,5 @@ Bundler.require(:default, RACK_ENV)
 
 reporter_options = {color: true, slow_count: 5}
 Minitest::Reporters.use! [Minitest::Reporters::DefaultReporter.new(reporter_options)]
+
+Dir[File.expand_path('../support/**/*.rb', __FILE__)].each { |file| require file}
