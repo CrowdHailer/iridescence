@@ -13,7 +13,7 @@ Run server with `rackup` or `shotgun` (for reloading)
 
 #### Initialization
 1. The `config.ru` loads the core application from `app/application.rb`
-2. The core application file loads gems and sets up enviroment with `config/boot.rb`
+2. The core application file loads gems, sets up enviroment and loads lib directory with `config/boot.rb`
 3. The application inherits from the base controller
 4. The application loads and mounts all controllers
 

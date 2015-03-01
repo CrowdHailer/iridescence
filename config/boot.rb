@@ -11,3 +11,9 @@ Bundler.require(:default, RACK_ENV)
 
 # Load enviromental variables
 Dotenv.load
+
+# requires all other configuration
+Dir[File.dirname(__FILE__) + '/*.rb'].each {|file| require file }
+
+# # require the lib directory
+Dir[File.expand_path('../../lib/*.rb', __FILE__)].each {|file| require file }
