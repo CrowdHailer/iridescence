@@ -9,6 +9,9 @@ require 'bundler/setup'
 # requires all gems for the current runtime enviroment
 Bundler.require(:default, RACK_ENV)
 
+# Thread safe loading
+require 'erb'
+
 # Load enviromental variables
 Dotenv.load
 
