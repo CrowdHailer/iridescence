@@ -5,6 +5,7 @@ Iridescence
 Visit setup branch to take project agnostic setup
 
 - Includes Procfile for thin on Heroku
+- Includes contstraints validations table on first migration
 
 Also used as the development enviroment for several Gems to encourage Domain Driven Design(DDD) in a rapid start up enviroment.
 
@@ -60,3 +61,13 @@ It provides a rich set of assertions to make your tests clean and
 readable.
 
 **[Factory Girl](https://github.com/thoughtbot/factory_girl)** -- A library for setting up Ruby objects as test data.
+
+## TODO
+
+- sass ruby or gulp
+- scorched rest
+- browserify gulp only
+
+new branch
+
+- user accounts
