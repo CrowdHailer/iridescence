@@ -11,6 +11,12 @@ Also used as the development enviroment for several Gems to encourage Domain Dri
 ## Setup
 Create a enviromental variables file for Dotenv `touch .env`
 
+Create databases with `createdb iridescence_development && createdb iridescence_test`
+
+Run development migrations with `rake db:migrate:up`
+
+Run test migrations with `RACK_ENV=test rake db:migrate:up`
+
 Run server with `rackup` or `shotgun` (for reloading)
 
 #### Initialization
