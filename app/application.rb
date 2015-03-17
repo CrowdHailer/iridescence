@@ -10,5 +10,10 @@ module Iridescence
 
     # Load further controllers before final root mounted controller
     controller '/', HomeController
+
+    error do |err|
+      env["rack.exception"] = err
+      false
+    end
   end
 end

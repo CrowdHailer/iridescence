@@ -5,5 +5,9 @@ module Iridescence
     get '/' do
       render :index
     end
+
+    get '/bad' do
+      1/0
+    end
   end
 end
