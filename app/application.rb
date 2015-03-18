@@ -4,7 +4,6 @@ require File.expand_path("../../config/boot.rb", __FILE__)
 require File.expand_path('../controllers/_base.rb', __FILE__)
 Dir[File.expand_path('../controllers/*.rb', __FILE__)].each { |file| require file}
 
-
 def production?
   RACK_ENV == 'production'
 end
