@@ -8,20 +8,11 @@
   <link rel="stylesheet" href="/stylesheets/application.css">
 </head>
 <body>
-  <%= render :'../partials/header' %>
+  <%= render File.expand_path('../../partials/header.erb', __FILE__).to_sym %>
 
-  <% if flash['success'] %>
-      <div class="content flash success">
-          <%= flash['success'] %> <i class="fa fa-times right"></i>
-      </div>
-  <% end %>
-  <% if flash['error'] %>
-      <div class="content flash error">
-          <%= flash['error'] %> <i class="fa fa-times right"></i>
-      </div>
-  <% end %>
   <%= yield %>
-  <%= render :'../partials/footer' %>
+
+  <%= render File.expand_path('../../partials/footer.erb', __FILE__).to_sym %>
 
   <script charset="utf-8">
     var $$ = document.querySelectorAll

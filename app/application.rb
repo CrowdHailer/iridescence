@@ -15,5 +15,9 @@ module Iridescence
       env["rack.exception"] = err
       false
     end
+
+    after :status => 404 do
+      response.body = render :'errors/404'
+    end
   end
 end
