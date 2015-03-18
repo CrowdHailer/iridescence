@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/CrowdHailer/Errol.git
+  revision: 7eba01bcc513bf1dbdce70f0e4ee06b6e16088cd
+  branch: master
+  specs:
+    errol (0.0.1)
+      sequel (~> 4.19.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -58,6 +66,7 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   dotenv
+  errol!
   factory_girl
   mail
   minitest

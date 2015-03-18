@@ -19,6 +19,7 @@ gem 'mail' # Handle sending emails - optional
 
 gem 'pg'
 gem 'sequel'
+gem 'errol', :git => 'https://github.com/CrowdHailer/Errol.git', :branch => 'master'
 
 group :test do
   gem 'factory_girl'
