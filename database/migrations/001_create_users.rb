@@ -4,6 +4,8 @@ Sequel.migration do
       primary_key :id, :type => :varchar, :auto_increment => false, :unique => true
       String :email, :null => false, :unique => true
       String :password, :null => false
+      TrueClass :admin, :default => false
+      
       String :remember_token
       String :password_reset_token
       DateTime :password_reset_created_at

@@ -12,11 +12,6 @@ Dir[File.expand_path('../support/**/*.rb', __FILE__)].each { |file| require file
 
 require_relative '../app/application'
 
-# TODO uncomment when using BCrypt
-# BCrypt::Engine.cost = 1
-
-
-
 class MyTest < MiniTest::Test
   include FactoryGirl::Syntax::Methods
 
