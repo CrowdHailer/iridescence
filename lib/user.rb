@@ -1,6 +1,1 @@
-class User < Sequel::Model(:users)
-  def initialize(*args, &block)
-    super
-    self.id ||= SecureRandom.urlsafe_base64
-  end
-end
+Dir[File.expand_path('../user/*.rb', __FILE__)].each { |file| require file}
