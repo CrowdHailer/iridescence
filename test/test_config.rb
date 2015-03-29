@@ -10,14 +10,12 @@ Minitest::Reporters.use! [Minitest::Reporters::DefaultReporter.new(reporter_opti
 
 Dir[File.expand_path('../support/**/*.rb', __FILE__)].each { |file| require file}
 
+require_relative '../app/application'
+
 # TODO uncomment when using BCrypt
 # BCrypt::Engine.cost = 1
 
-# Searches for factories in test/factories
-FactoryGirl.find_definitions
 
-# overwrite as using sequel not active record
-FactoryGirl.to_create { |i| i.save }
 
 class MyTest < MiniTest::Test
   include FactoryGirl::Syntax::Methods

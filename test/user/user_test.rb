@@ -10,7 +10,7 @@ class MyTest
   end
 
   def test_user_can_have_email
-    user = User.new :email => email
+    user = create :user, :email => email
     assert_equal email, user.email
   end
 end
