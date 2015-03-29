@@ -24,6 +24,13 @@ class EmailTest < MiniTest::Test
     end
   end
 
+  def test_cannot_edit_email
+    email = Email.new('test@example.com')
+    assert_raises NoMethodError do
+      email.value = 'd@c.com'
+    end
+  end
+
   # Comparison
 
   def test_is_equal_for_same_email

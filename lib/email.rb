@@ -30,15 +30,15 @@ class Email
     @value
   end
 
-  def value=(new_value)
-    @value = new_value.strip[/^[^@]+@[^@]+$/] || invalid(new_value)
-  end
-
   def <=>(other)
     value <=> other
   end
 
   private
+
+  def value=(new_value)
+    @value = new_value.strip[/^[^@]+@[^@]+$/] || invalid(new_value)
+  end
 
   def invalid(bad_format)
     raise Invalid.new "'#{bad_format}' is not a valid email"
