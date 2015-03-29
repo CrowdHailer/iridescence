@@ -1,20 +1,19 @@
 Sequel.migration do
   up do
-    extension(:constraint_validations)
-
-    DB.create_constraint_validations_table
-
     create_table(:users) do
       primary_key :id, :type => :varchar, :auto_increment => false, :unique => true
-      String :name, :null => false
+      String :email, :null => false, :unique => true
+      String :password, :null => false
+      String :remember_token
+      String :password_reset_token
+      DateTime :password_reset_created_at
+      DateTime :created_at
+      DateTime :updated_at
+      DateTime :last_login_at
     end
   end
 
   down do
-    extension(:constraint_validations)
-
     drop_table(:users)
-
-    DB.drop_constraint_validations_table
   end
 end
