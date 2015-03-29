@@ -20,6 +20,16 @@ class Email
     new(string)
   end
 
+  # TODO test
+  # forge, actualize, attempt 
+  def self.try(value)
+    begin
+      new(value)
+    rescue Invalid => err
+      yield err.message
+    end
+  end
+
   def to_s
     value
   end
